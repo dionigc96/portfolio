@@ -1,0 +1,17 @@
+.home-content-button-projects {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  --swiper-navigation-size: 20px; /* Cambia el tamaño de las flechas */
+  color: var(--primary-color); /* Cambia el color de las flechas si es necesario */
+  margin-top: 5px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  --swiper-navigation-size: 25px; /* Tamaño más grande al pasar el ratón */
+}
