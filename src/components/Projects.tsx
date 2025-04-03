@@ -104,7 +104,7 @@ const Projects = () => {
           768: { slidesPerView: 2, spaceBetween: 30 },
           1024: { slidesPerView: 3, spaceBetween: 30 },
           1200: { slidesPerView: 3, spaceBetween: 20 },
-          1536: { slidesPerView: 3, spaceBetween: -100 }, 
+          1536: { slidesPerView: 3, spaceBetween: 30 }, 
         }}
       >
         {projects.map((project, index) => (

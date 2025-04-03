@@ -51,6 +51,17 @@ header {
     z-index: 10000; 
 }
 
+section {
+    width: 100%;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    overflow: visible; /* Asegura que no haya restricciones de overflow */
+}
+
+
+section.container.mx-auto {
+    overflow: visible; /* Cambia overflow para permitir que el header sticky funcione */
+}
+
 .right-header nav ul {
     display: flex;
     list-style: none;
@@ -319,7 +330,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    min-height: 90vh;
     width: 100%;
 }
 
