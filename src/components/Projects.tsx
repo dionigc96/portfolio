@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import {
   Button,
   Card,
@@ -15,85 +14,75 @@ import {
   Paper
 } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/swiper-bundle.css'
+import 'swiper/swiper-bundle.css';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
-import './Projects.css'
+import './Projects.css';
 
-const projects = [
-  {
-    title: 'E-Commerce Platform',
-    description: 'A fully responsive e-commerce platform.',
-    image: 'https://mui.com/static/images/cards/contemplative-reptile.jpg',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'JavaScript', 'HTML', 'CSS', 'Material-UI'],
-  },
-  {
-    title: 'Task Management App',
-    description: 'Kanban-style app with drag-and-drop and live updates.',
-    image: 'https://mui.com/static/images/cards/contemplative-reptile.jpg',
-    tech: ['React', 'Firebase', 'TypeScript'],
-  },
-  {
-    title: 'Finance Dashboard',
-    description: 'Track expenses, income and investment performance.',
-    image: 'https://mui.com/static/images/cards/contemplative-reptile.jpg',
-    tech: ['Vue.js', 'Chart.js', 'Supabase'],
-  },
-  {
-    title: 'Finance Dashboard',
-    description: 'Track expenses, income and investment performance.',
-    image: 'https://mui.com/static/images/cards/contemplative-reptile.jpg',
-    tech: ['Vue.js', 'Chart.js', 'Supabase'],
-  }
-];
-
-const Projects = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 2000,
-      once: true, // Ejecutar la animación solo una vez
-    });
-  }, []);
+const Projects = ({ dataAos }: { dataAos: any }) => {
+  const projects = [
+    {
+      title: 'E-Commerce Platform',
+      description: 'A fully responsive e-commerce platform.',
+      image: 'https://mui.com/static/images/cards/contemplative-reptile.jpg',
+      tech: ['React', 'Node.js', 'Express', 'MongoDB', 'JavaScript', 'HTML', 'CSS', 'Material-UI'],
+    },
+    {
+      title: 'Task Management App',
+      description: 'Kanban-style app with drag-and-drop and live updates.',
+      image: 'https://mui.com/static/images/cards/contemplative-reptile.jpg',
+      tech: ['React', 'Firebase', 'TypeScript'],
+    },
+    {
+      title: 'Finance Dashboard',
+      description: 'Track expenses, income and investment performance.',
+      image: 'https://mui.com/static/images/cards/contemplative-reptile.jpg',
+      tech: ['Vue.js', 'Chart.js', 'Supabase'],
+    },
+    {
+      title: 'Finance Dashboard',
+      description: 'Track expenses, income and investment performance.',
+      image: 'https://mui.com/static/images/cards/contemplative-reptile.jpg',
+      tech: ['Vue.js', 'Chart.js', 'Supabase'],
+    }
+  ];
 
   return (
-    <section id="projects" style={{ padding: '2rem' }} data-aos="fade-up">
+    <section id="projects" style={{ padding: '2rem' }} data-aos={dataAos.fadeUp}>
       <Box textAlign="center" mb={4} mt={5}>
-          <Paper
-            elevation={1}
-            sx={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              padding: '0.5rem 1rem',
-              borderRadius: '20px',
-              backgroundColor: 'var(--white-color)',
-            }}
-          >
-            <PersonIcon sx={{ fontSize: 20, color: 'black', mr: 1 }} />
-            <Typography variant="body2" sx={{ color: 'black' }}>
-              My Projects
-            </Typography>
-          </Paper>
-        </Box>
-        <Typography
-          variant="h4"
-          component="h2"
-          align="center"
-          gutterBottom
+        <Paper
+          elevation={1}
           sx={{
-            fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-            color: 'var(--grey-parraf)',
-            fontSize: '1.25rem',
-            marginBottom: '2rem'
+            display: 'inline-flex',
+            alignItems: 'center',
+            padding: '0.5rem 1rem',
+            borderRadius: '20px',
+            backgroundColor: 'var(--white-color)',
           }}
         >
-          Get to know more about my background and expertise
-        </Typography>
+          <PersonIcon sx={{ fontSize: 20, color: 'black', mr: 1 }} />
+          <Typography variant="body2" sx={{ color: 'black' }}>
+            My Projects
+          </Typography>
+        </Paper>
+      </Box>
+      <Typography
+        variant="h4"
+        component="h2"
+        align="center"
+        gutterBottom
+        sx={{
+          fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+          color: 'var(--grey-parraf)',
+          fontSize: '1.25rem',
+          marginBottom: '2rem'
+        }}
+      >
+        Get to know more about my background and expertise
+      </Typography>
 
       <Swiper
         modules={[Navigation, Pagination]}

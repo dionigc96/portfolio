@@ -59,7 +59,7 @@ section {
 
 
 section.container.mx-auto {
-    overflow: visible; /* Cambia overflow para permitir que el header sticky funcione */
+    overflow: hidden; /* Cambia overflow para permitir que el header sticky funcione */
 }
 
 .right-header nav ul {
@@ -330,7 +330,7 @@ section.container.mx-auto {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
+    min-height: 20vh;
     width: 100%;
 }
 

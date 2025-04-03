@@ -3,9 +3,10 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 
-const SocialLinks = () => {
+const SocialLinks = ({ dataAos }: { dataAos: any }) => {
   return (
     <Box
+      data-aos={dataAos}
       sx={{
         textAlign: 'center',
         mb: 4,

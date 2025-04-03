@@ -1,31 +1,47 @@
 import { Box, TextField, Button } from '@mui/material';
 
-const ContactForm = () => {
+const ContactForm = ({ dataAos }: { dataAos: any }) => {
+    const CustomTextField = (props: any) => (
+        <TextField
+            {...props}
+            variant="outlined"
+            fullWidth
+            required
+            sx={{
+                '& .MuiOutlinedInput-root': {
+                    '&.Mui-focused fieldset': {
+                        borderColor: 'var(--primary-color)', // Cambia el color del borde al enfocar
+                    },
+                },
+            }}
+        />
+    );
+
     return (
         <Box
             component="form"
+            data-aos={dataAos}
             sx={{
-                maxWidth: 600,
+                maxWidth: {
+                    xs: '100%', // Pantallas extra pequeñas
+                    sm: '60%',  // Pantallas pequeñas
+                    md: 600,    // Pantallas medianas
+                    lg: 700,    // Pantallas grandes
+                },
+                width: '100%', 
                 margin: '0 auto',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: 2,
-                border: '1px solid',
-                borderColor: 'grey.300',
+                border: '3px solid',
+                borderColor: 'var(--primary-color)',
                 borderRadius: 2,
                 padding: 2,
             }}
         >
-            <TextField label="Name" variant="outlined" fullWidth required />
-            <TextField label="Email" type="email" variant="outlined" fullWidth required />
-            <TextField
-                label="Message"
-                variant="outlined"
-                fullWidth
-                required
-                multiline
-                rows={4}
-            />
+            <CustomTextField label="Name" />
+            <CustomTextField label="Email" type="email" />
+            <CustomTextField label="Message" multiline rows={4} />
             <Button
                 variant="contained"
                 sx={{

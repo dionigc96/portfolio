@@ -1,10 +1,11 @@
 import NavMenu from "./NavMenu";
+import LeftHeaderContent from "./LeftHeaderContent";
 
 const Header = () => {
   return (
     <header>
       <div className="left-header">
-        <span className="left-header-content">Computer engineer</span>
+        <LeftHeaderContent />
       </div>
       <div className="right-header">
         <NavMenu />

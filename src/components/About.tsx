@@ -2,22 +2,12 @@ import { Container, Typography, Paper, Box, Stack } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import WorkIcon from '@mui/icons-material/Work';
 import InfoIcon from '@mui/icons-material/Info';
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
-const About = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 2000,
-      once: true, // Ejecutar la animación solo una vez
-    });
-  }, []);
-
+const About = ({ dataAos }: { dataAos: any }) => {
   return (
-    <section id="about" className="about" data-aos="fade-up">
+    <section id="about" className="about" data-aos={dataAos.fadeUp}>
       <Container maxWidth="lg">
-        <Box textAlign="center" mb={4} mt={20}>
+        <Box textAlign="center" mb={4} mt={10}>
           <Paper
             elevation={1}
             sx={{
