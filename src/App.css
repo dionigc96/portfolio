@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #4072bf;
+    --primary-color: hsl(241, 96%, 72%);
     --grey-parraf: #5c6272;
-    --white-color: #f0f0f0;
+    --white-color: #F5EFFF;
     --background-button-contact-me: hsl(220 10% 95%);
     --color-contact-me: hsl(0 0% 5%);
     --translucent-header: rgba(255, 255, 255, 0.8);
@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-    background-color: white;
+    background-color: #F5EFFF;
 }
 
 ::-webkit-scrollbar {
@@ -321,7 +321,6 @@ header {
     align-items: center;
     height: 90vh;
     width: 100%;
-    background-color: white; /* Cambia el fondo a blanco */
 }
 
 @media (max-width: 768px) {
