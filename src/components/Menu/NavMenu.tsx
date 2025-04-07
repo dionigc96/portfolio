@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Drawer, IconButton, List, ListItemButton, ListItemText, Box, useMediaQuery, useTheme, Stack } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import SocialIconButton from '../Utils/SocialIconButton';
 
 const NavMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -91,7 +92,7 @@ const NavMenu = () => {
 
           {/* Botones de idioma */}
           <Stack direction="row" justifyContent="center" spacing={2} sx={{ mb: 2 }}>
-            <IconButton>
+            <SocialIconButton href="#">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg"
                 alt="Español"
@@ -101,8 +102,8 @@ const NavMenu = () => {
                   objectFit: 'contain', // Mantiene la proporción de la imagen
                 }}
               />
-            </IconButton>
-            <IconButton>
+            </SocialIconButton>
+            <SocialIconButton href="#">
               <img
                 src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
                 alt="English"
@@ -112,7 +113,7 @@ const NavMenu = () => {
                   objectFit: 'contain', // Mantiene la proporción de la imagen
                 }}
               />
-            </IconButton>
+            </SocialIconButton>
           </Stack>
         </Box>
       </Drawer>
@@ -138,7 +139,7 @@ const NavMenu = () => {
 
           {/* Botones de idioma */}
           <Stack direction="column" spacing={-2}>
-            <IconButton>
+            <SocialIconButton href="#">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg"
                 alt="Español"
@@ -148,8 +149,8 @@ const NavMenu = () => {
                   objectFit: 'contain', // Mantiene la proporción de la imagen
                 }}
               />
-            </IconButton>
-            <IconButton>
+            </SocialIconButton>
+            <SocialIconButton href="#">
               <img
                 src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
                 alt="English"
@@ -159,7 +160,7 @@ const NavMenu = () => {
                   objectFit: 'contain', // Mantiene la proporción de la imagen
                 }}
               />
-            </IconButton>
+            </SocialIconButton>
           </Stack>
         </Box>
       )}

@@ -7,20 +7,19 @@ import {
   CardActions,
   CardActionArea,
   Chip,
-  Typography,
   Box,
   Stack,
   IconButton,
-  Paper
+  Typography
 } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
-
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
-import './Projects.css';
+import SectionHeader from '../Utils/SectionHeader';
+import '../../assets/ProjectsSection/Projects.css';
 
 const Projects = ({ dataAos }: { dataAos: any }) => {
   const projects = [
@@ -52,38 +51,11 @@ const Projects = ({ dataAos }: { dataAos: any }) => {
 
   return (
     <section id="projects" style={{ padding: '2rem' }} data-aos={dataAos.fadeUp}>
-      <Box textAlign="center" mb={4} mt={5}>
-        <Paper
-          elevation={1}
-          sx={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            padding: '0.5rem 1rem',
-            borderRadius: '20px',
-            backgroundColor: 'var(--white-color)',
-          }}
-        >
-          <PersonIcon sx={{ fontSize: 20, color: 'black', mr: 1 }} />
-          <Typography variant="body2" sx={{ color: 'black' }}>
-            My Projects
-          </Typography>
-        </Paper>
-      </Box>
-      <Typography
-        variant="h4"
-        component="h2"
-        align="center"
-        gutterBottom
-        sx={{
-          fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-          color: 'var(--grey-parraf)',
-          fontSize: '1.25rem',
-          marginBottom: '2rem'
-        }}
-      >
-        Get to know more about my background and expertise
-      </Typography>
-
+      <SectionHeader
+        icon={PersonIcon}
+        title="My Projects"
+        subtitle="Get to know more about my background and expertise"
+      />
       <Swiper
         modules={[Navigation, Pagination]}
         navigation

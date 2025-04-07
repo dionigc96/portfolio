@@ -1,0 +1,38 @@
+:root {
+    --primary-color: hsl(241, 96%, 72%);
+    --grey-parraf: #5c6272;
+    --white-color: #F5EFFF;
+    --background-button-contact-me: hsl(220 10% 95%);
+    --color-contact-me: hsl(0 0% 5%);
+    --translucent-header: rgba(255, 255, 255, 0.8);
+}
+
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+body {
+    background-color: #F5EFFF;
+}
+
+::-webkit-scrollbar {
+    width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background: var(--white-color) /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color); /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    border: 3px solid var(--white-color); 
+}

@@ -12,6 +12,14 @@ const ContactForm = ({ dataAos }: { dataAos: any }) => {
                     '&.Mui-focused fieldset': {
                         borderColor: 'var(--primary-color)', // Cambia el color del borde al enfocar
                     },
+                    '&:hover fieldset': {
+                        borderColor: 'var(--primary-color)', // Cambia el color del borde al pasar el mouse
+                    },
+                },
+                '& .MuiInputLabel-root': {
+                    '&.Mui-focused': {
+                        color: 'var(--primary-color)', // Cambia el color del label al enfocar
+                    },
                 },
             }}
         />

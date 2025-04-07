@@ -1,11 +1,11 @@
 import './index.css';
 import './App.css';
-import Header from './components/Header';
+import Header from './components/Menu/Header';
 import Home from './components/Home';
-import Projects from './components/Projects';
-import About from './components/About';
-import Services from './components/Services';
-import Contact from './components/Contact';
+import Projects from './components/ProjectsSection/Projects';
+import About from './components/About/About';
+import Services from './components/ServiceSection/Services';
+import Contact from './components/Contact/Contact';
 import Footer from './components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
